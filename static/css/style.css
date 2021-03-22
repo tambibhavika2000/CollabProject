@@ -1,0 +1,262 @@
+:root{
+  --primary:#3DCFD3;
+  --dark:#161616;
+  --pure:#FFFFFF;
+  --light:#F2F2F2;
+  --ternary:#898989;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: montserrat;
+  }
+
+  .container{
+    max-width: 100rem;
+    padding: 2rem 4rem 2rem 2rem;
+    margin: 2rem 0.938rem 0.938rem 2rem;
+}
+
+  /*************************** NAV bar CSS ***************************************/
+  nav{
+    background: var(--dark);
+    height: 5rem;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+  }
+  label.logo{
+    color: white;
+    font-size: 2.188rem;
+    line-height: 5rem;
+    padding: 0 6.25rem;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 1.25rem;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 5rem;
+    margin: 0 0.313rem;
+  }
+  nav ul li a{
+    color:var(--pure);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background:var(--primary);
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 1.875rem;
+    color:var(--pure);
+    float: right;
+    line-height: 5rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+  /****************** RIGHT SIDE BAR **********************/
+  .sidebar{
+    position: fixed;
+    display: block;
+    width: 13.75rem;
+    top:5rem;
+    right: 0;
+    bottom: 0;
+    background:var(--dark);
+    padding-top: 0.625rem;
+ }
+
+
+ .sidebar .bookmark{
+  display: block;
+  padding: 0.625rem 1.25rem;
+  color:var(--pure);
+  letter-spacing: 2px;
+}
+
+.sidebar .bookmark:hover{
+  color: #fff;
+  margin-left: 1.25rem;
+  transition: 0.4s;
+  background-color: var(--primary);
+}
+
+.sidebar .info{
+  display: block;
+  padding: 0.625rem 1.25rem;
+  color:var(--pure);
+  letter-spacing: 2px;
+}
+
+.sidebar .info:hover{
+  color: #fff;
+  margin-left: 1.25rem;
+  transition: 0.4s;
+  background-color: var(--primary);
+}
+
+ .sidebar i{
+   padding: 0.625rem;
+ }
+
+ /* *****************Main Content************** */
+ table {
+   margin-top: 3.125rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 1.875rem;
+  font-size: 1.2rem;
+  text-align: center;}
+
+td i{
+  cursor: pointer;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+table td img{
+  height: 3.125rem;
+  width: 3.125rem;
+}
+  /******************************  Media Queries  *************************************/
+  @media(max-width: 830px){
+    tr th:nth-child(8),tr td:nth-child(8){
+      display:none;
+    }
+    tr th:nth-child(5),tr td:nth-child(5){
+      display:none;
+    }
+
+  }
+  @media(max-width: 565px){
+    tr th:nth-child(8),tr td:nth-child(8){
+      display:none;
+    }
+    tr th:nth-child(4),tr td:nth-child(4){
+      display:none;
+    }
+    tr th:nth-child(5),tr td:nth-child(5){
+      display:none;
+    }
+    tr th:nth-child(7),tr td:nth-child(7){
+      display:none;
+    }
+
+  }
+
+  @media(max-width: 565px){
+    tr th:nth-child(8),tr td:nth-child(8){
+      display:none;
+    }
+    tr th:nth-child(4),tr td:nth-child(4){
+      display:none;
+    }
+    tr th:nth-child(5),tr td:nth-child(5){
+      display:none;
+    }
+    tr th:nth-child(7),tr td:nth-child(7){
+      display:none;
+    }
+  }
+     @media(max-width: 370px){
+    tr th:nth-child(8),tr td:nth-child(8){
+      display:none;
+    }
+    tr th:nth-child(4),tr td:nth-child(4){
+      display:none;
+    }
+    tr th:nth-child(5),tr td:nth-child(5){
+      display:none;
+    }
+    tr th:nth-child(7),tr td:nth-child(7){
+      display:none;
+    }
+    tr th:nth-child(6),tr td:nth-child(6){
+      display:none;
+    }
+    table img{
+      height: 20px;
+      width: 20px;
+    }
+    .container{
+      max-width: 100rem;
+      padding: 1rem 2rem 1rem 1rem;
+      margin: 0.5rem 4rem 0.938rem 0.5rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.9rem;}
+  
+
+  }
+
+  
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 1.875rem;
+      padding-left: 3.125rem;
+    }
+    nav ul li a{
+      font-size: 1rem;
+    }
+  }
+
+  
+  @media (max-width: 1325px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 5rem;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 3.125rem 0;
+      line-height: 1.875rem;
+    }
+    nav ul li a{
+      font-size: 1.25rem;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+    .sidebar span {
+      display: none;
+    }
+    .sidebar{
+      width: 5rem;
+    }
+    html{
+      font-size: 60%;
+    }
+  }

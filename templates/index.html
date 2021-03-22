@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+      <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Coding Schedule</title>
+  </head>
+  <body>
+    {% load static %}
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">CodingS</label>
+      <ul>
+        <li><a class="active" href="#">All Contests</a></li>
+        <li><a href="#">Hackerearth</a></li>
+        <li><a href="#">Codeforces</a></li>
+        <li><a href="#">CodeChef</a></li>
+        <li><a href="#">Leetcode</a></li>
+        <li><a href="#">HackerRank</a></li>
+      </ul>
+    </nav>
+
+
+    <div style="overflow-x:auto;" class='container'>
+  <table>
+    <tr>
+      <th>Contest Name</th>
+      <th>Platform</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Duration</th>
+      <th>Link</th>
+      <th>Bookmark</th>
+      <th>Remove</th>
+    </tr>
+    <tr>
+      <td>March Circuits'21</td>
+      <td><img src="{% static 'images/hackerearth_small.png' %}"></td>
+      <td>9:00 <br>22-03-21</td>
+      <td>9:00 <br>27-03-21</td>
+      <td>7 Days</td>
+      <td><i class="fas fa-link"></i></td>
+      <td><i class="fas fa-bookmark"></i></td>
+      <td><i class="fas fa-trash-alt"></i></td>
+    </tr>
+        <tr>
+      <td>BiWeekly Contest</td>
+      <td><img src="{% static 'images/leetcode_small.png' %}"></td>
+      <td>9:00  <br>22-03-21</td>
+      <td>11:00 <br>22-03-21</td>
+      <td>2 hours</td>
+      <td><i class="fas fa-link"></i></td>
+      <td><i class="fas fa-bookmark"></i></td>
+      <td><i class="fas fa-trash-alt"></i></td>
+    </tr>
+        <tr>
+      <td>Lunch Time</td>
+      <td><img src="{%static 'images/hackerrank_small.png' %}"></td>
+      <td>10:00 <br>27-03-21</td>
+      <td>12:00 <br>27-03-21</td>
+      <td>2 Hours</td>
+      <td><i class="fas fa-link"></i></td>
+      <td><i class="fas fa-bookmark"></i></td>
+      <td><i class="fas fa-trash-alt"></i></td>
+    </tr>
+    
+  </table>
+</div>
+
+
+    <div class="sidebar">
+   <div class="info"><i class="fas fa-user-circle"></i><span>Info</span></div>
+   <div class="bookmark"><i class="fas fa-bookmark"></i><span>BookMarks</span></div>
+</div>
+    </div>
+  </body>
+</html>
