@@ -7,7 +7,7 @@ urlpatterns = [
 	path('contest-list/', views.ContestList, name="contest-list"),
 	path('contest-detail/<str:pk>/', views.ContestDetail, name="contest-detail"),
 	path('contest-create/', views.ContestCreate, name="contest-create"),
-
+	path('contest-by-platform/<str:arg>/', views.ContestbyPlatform, name="contest-by-platform"),
 	path('contest-update/<str:pk>/', views.ContestUpdate, name="contest-update"),
 	path('contest-delete/<str:pk>/', views.ContestDelete, name="contest-delete"),
 ]

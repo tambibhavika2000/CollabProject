@@ -8,7 +8,7 @@ from .models import Contest
 @api_view(['GET'])
 def overview(request):
     api_urls = {
-        'List': 'list/',
+        'List': 'contest-list/',
         'Detail View': 'contest-detail/<str:pk>/',
         'Create': 'contest-create/',
         'Update': 'contest-update/<str:pk>/',
@@ -23,6 +23,11 @@ def ContestList(request):
     serial = ContestSerializer(items, many=True)
     return Response(serial.data)
 
+@api_view(['GET'])
+def ContestbyPlatform(request, arg):
+    items = Contest.objects.filter(platform=arg)
+    serial = ContestSerializer(items, many=True)
+    return Response(serial.data)
 
 @api_view(['GET'])
 def ContestDetail(request, pk):
