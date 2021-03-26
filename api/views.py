@@ -10,12 +10,12 @@ def overview(request):
     api_urls = {
         'List': 'contest-list/',
         'Detail View': 'contest-detail/<str:pk>/',
+        'Filter by platform': 'contest-by-platform/<str:arg>'
         'Create': 'contest-create/',
         'Update': 'contest-update/<str:pk>/',
         'Delete': 'contest-delete/<str:pk>/',
     }
     return Response(api_urls)
-
 
 @api_view(['GET'])
 def ContestList(request):
